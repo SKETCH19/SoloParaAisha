@@ -97,7 +97,7 @@ function createHearts(x, y) {
         heart.style.pointerEvents = 'none';
         heart.style.zIndex = '1000';
         heart.style.animation = 'floatUp 2s ease-out forwards';
-        heart.style.filter = 'drop-shadow(0 0 10px rgba(255, 0, 0, 0.8))';
+        heart.style.filter = 'drop-shadow(0 0 10px rgba(135, 206, 250, 0.9))';
         
         const angle = (Math.PI * 2 * i) / 10;
         const velocity = 120;
