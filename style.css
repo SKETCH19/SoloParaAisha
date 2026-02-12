@@ -274,8 +274,8 @@ body {
         0 0 100px rgba(200, 220, 255, 0.6),
         inset -10px -10px 20px rgba(0, 0, 0, 0.1);
     animation: moonGlow 4s ease-in-out infinite, moonPhases 300s linear infinite, moonVisibility 300s linear infinite;
-    position: relative;
     overflow: hidden;
+    z-index: 3;
 }
 
 /* Sombra para crear las fases de la luna */
@@ -370,14 +370,20 @@ body {
 }
 
 @keyframes moonVisibility {
-    /* Visible en noche y transiciones */
-    0%, 80%, 100% { opacity: 1; }
+    /* Visible en noche */
+    0% { opacity: 1; }
+    5% { opacity: 1; }
     /* Desvanece en amanecer */
-    10%, 15% { opacity: 0.5; }
+    10% { opacity: 0.7; }
+    15% { opacity: 0.3; }
     /* Invisible durante el día */
     20%, 60% { opacity: 0; }
     /* Aparece en atardecer */
-    70%, 75% { opacity: 0.5; }
+    70% { opacity: 0.3; }
+    75% { opacity: 0.7; }
+    /* Visible en noche */
+    80% { opacity: 1; }
+    100% { opacity: 1; }
 }
 
 /* Nubes - siempre visibles pero con diferentes opacidades */
