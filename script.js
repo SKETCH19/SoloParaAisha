@@ -15,8 +15,8 @@ function showNext(messageNumber) {
     // Actualizar el timeline
     updateTimeline(messageNumber);
     
-    // Si es el mensaje del contador, iniciarlo
-    if (messageNumber === 4) {
+    // Si es el mensaje del contador (último mensaje), iniciarlo
+    if (messageNumber === 6) {
         startCountdown();
     }
     
@@ -67,13 +67,12 @@ function startCountdown() {
             <span style="font-size: 0.6em; opacity: 0.8;">hasta mañana</span>
         `;
         
-        if (diff <= 0) {
-            countdownElement.innerHTML = '¡Ya es mañana! 💖';
-            clearInterval(countdownInterval);
-        }
+        // Si llega a 0, el contador se reiniciará automáticamente en la próxima actualización
+        // porque calculará un nuevo "tomorrow" (24 horas más)
     }
     
     updateCountdown();
+    // El contador se actualiza cada segundo y siempre se reinicia automáticamente cada 24 horas
     const countdownInterval = setInterval(updateCountdown, 1000);
 }
 
