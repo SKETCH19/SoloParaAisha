@@ -96,7 +96,12 @@
             <div class="timeline-label">Autonomía</div>
         </div>
         <div class="timeline-line"></div>
-        <div class="timeline-step" data-message="9" onclick="showNext(9)">
+        <div class="timeline-step" data-message="9" onclick="showNext(8)">
+            <div class="timeline-dot">10</div>
+            <div class="timeline-label">Song</div>
+        </div>
+        <div class="timeline-line"></div>
+        <div class="timeline-step" data-message="10" onclick="showNext(9)">
             <div class="timeline-dot"></div>
             <div class="timeline-label">Continuará</div>
         </div>
@@ -191,6 +196,13 @@ No todos necesitan hacerlo.</p>
         </div>
 
         <div class="message-box hidden" id="message-9">
+            <div class="heart-icon">💪</div>
+            <h2 class="message-title">Just a song for YOU</h2>
+            <p class="message-text"></p>
+            <button class="next-btn" onclick="showNext(10)">Siguiente</button>
+        </div>
+
+        <div class="message-box hidden" id="message-10">
             <div class="heart-icon">⏳</div>
             <h2 class="message-title">Continuará...</h2>
             <p class="message-text">Espera a mañana para poder ver el siguiente mensaje...</p>
